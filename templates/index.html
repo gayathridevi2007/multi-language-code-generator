@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeGen AI</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- BLUR EFFECTS -->
+
+    <div class="blur1"></div>
+    <div class="blur2"></div>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>CodeGen AI</h1>
+
+        <button>Compiler Project</button>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h2>
+            Transform User Input Into
+            <span>Multi-Language Code</span>
+        </h2>
+
+        <p>
+            Generate Python, Java, and C code instantly using compiler concepts.
+        </p>
+
+        <!-- INPUT -->
+
+        <textarea
+        id="userInput"
+        placeholder="Example: Create a factorial program"></textarea>
+
+        <!-- BUTTON -->
+
+        <button class="generate-btn"
+        onclick="generateCode()">
+
+            ✨ Generate Code
+
+        </button>
+
+    </section>
+
+    <!-- OUTPUT SECTION -->
+
+    <section class="output-section">
+
+        <!-- PYTHON -->
+
+        <div class="code-card">
+
+            <div class="card-top">
+
+                <h3>🐍 Python</h3>
+
+                <button onclick="copyCode('pythonOutput')">
+                    Copy
+                </button>
+
+            </div>
+
+            <pre id="pythonOutput"></pre>
+
+        </div>
+
+        <!-- JAVA -->
+
+        <div class="code-card">
+
+            <div class="card-top">
+
+                <h3>☕ Java</h3>
+
+                <button onclick="copyCode('javaOutput')">
+                    Copy
+                </button>
+
+            </div>
+
+            <pre id="javaOutput"></pre>
+
+        </div>
+
+        <!-- C -->
+
+        <div class="code-card">
+
+            <div class="card-top">
+
+                <h3>💻 C</h3>
+
+                <button onclick="copyCode('cOutput')">
+                    Copy
+                </button>
+
+            </div>
+
+            <pre id="cOutput"></pre>
+
+        </div>
+
+    </section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
